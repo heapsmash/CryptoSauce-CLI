@@ -1,0 +1,47 @@
+{
+    "version": "1.2.0",
+    "name": "crypto-sauce",
+    "scripts": {
+        "build": "tsc --build",
+        "clean": "tsc --build --clean",
+        "start": "tsc --build && node ./dist/cli.js"
+    },
+    "bin": {
+        "crypto-sauce": "./dist/cli.js"
+    },
+    "compilerOptions": {
+        "noImplicitAny": false,
+        "noEmitOnError": true,
+        "removeComments": true,
+        "sourceMap": true,
+        "target": "es2021",
+        "outDir": "dist"
+    },
+    "dependencies": {
+        "chalk": "^4.1.2",
+        "cli-progress": "^3.11.2",
+        "commander": "^9.4.1",
+        "md5": "^2.3.0",
+        "ncu": "^0.2.1",
+        "tslog": "^4.4.4",
+        "typescript": "~4.9.4",
+        "yaml": "^2.1.3"
+    },
+    "devDependencies": {
+        "@types/md5": "^2.3.2",
+        "@types/node": "~18.11.12",
+        "@typescript-eslint/eslint-plugin": "^5.46.0",
+        "@typescript-eslint/parser": "~5.46.0",
+        "eslint": "~8.29.0",
+        "eslint-config-prettier": "~8.5.0",
+        "eslint-plugin-deprecation": "~1.3.3",
+        "eslint-plugin-prettier": "~4.2.1",
+        "prettier": "~2.8.1",
+        "pretty-quick": "~3.1.3"
+    },
+    "description": "",
+    "main": "cli.js",
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
