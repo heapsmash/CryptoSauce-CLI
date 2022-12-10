@@ -2,12 +2,16 @@
 
 import { encryptFile, decryptFile } from './crypto-generator';
 import * as cliProgress from 'cli-progress';
-const readline = require('readline');
 import { Command } from 'commander';
-import chalk = require('chalk');
+import readline from 'readline';
 import { Log } from './logger';
-import md5 = require('md5');
+import chalk from 'chalk';
 import * as fs from 'fs';
+import md5 from 'md5';
+
+type RtHack = {
+    _writeToOutput: (stringToWrite: string) => void
+} & readline.Interface
 
 const log = new Log('CryptoSauce');
 const stdin = process.stdin;
@@ -93,8 +97,9 @@ const passwordPrompt = (query: string) => {
     };
     stdin.on('data', promptHandler);
 
-    // We have to override this or it mangles our output
-    rl._writeToOutput = (stringToWrite: string) => {};
+    // We have to override this or it mangles our output. And casting as 'RtHack'
+    // is a workaround b/c typescript doesn't see the dunder method in readline.Interface
+    (rl as RtHack)._writeToOutput = (stringToWrite: string) => {};
 
     return retval;
 };

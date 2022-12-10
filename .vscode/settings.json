@@ -1,0 +1,9 @@
+{
+  "eslint.workingDirectories": [
+    {
+      "pattern": "./*/*"
+    }
+  ],
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "prettier.requireConfig": true
+}
