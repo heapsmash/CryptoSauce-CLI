@@ -35,5 +35,5 @@ Re-enter your password: ********
 CryptoSauce Progress |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% || 1219759/1219759
 INFO [CryptoSauce] 'image.jpg' is now encrypted at 'image.jpg.crypt'
 INFO [CryptoSauce] 'image.jpg' was removed
-INFO [CryptoSauce] goodbye!
+INFO [CryptoSauce] Goodbye!
 ```
