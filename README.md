@@ -1,4 +1,4 @@
-# crypto-sauce-cli
+# CryptoSauce (AES-256-CBC Encryption Utility CLI)
 
 ```bash
 git clone git@github.com:heapsmash/CryptoSauce-CLI.git
