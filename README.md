@@ -3,7 +3,7 @@
 ```bash
 git clone git@github.com:heapsmash/CryptoSauce-CLI.git
 
-cd crypto-sauce-cli
+cd CryptoSauce-CLI
 
 npm install
 npm run build
