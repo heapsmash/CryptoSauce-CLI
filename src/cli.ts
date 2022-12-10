@@ -155,7 +155,7 @@ const decryptoSauceFile = async (infile: string, out: string | undefined, remove
 
 /* ------------------------------------------------------------------------- */
 const validateOptions = (options: { [key: string]: any }) => {
-    const { decrypt, encrypt, infile, outfile, remove } = options;
+    const { decrypt, encrypt, infile, outfile } = options;
     if ((decrypt && encrypt) || (!decrypt && !encrypt) || !infile) {
         return false;
     } else if (!infile.trim() || (outfile && !outfile.trim())) {
