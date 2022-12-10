@@ -10,6 +10,15 @@ npm run build
 npm i -g
 
 crypto-sauce --help
+Usage: crypto-sauce [options]
+
+Options:
+  -d, --decrypt         flag to decrypt
+  -e, --encrypt         flag to encrypt
+  -i, --infile <type>   input file to decrypt/encrypt
+  -o, --outfile <type>  output file of encryption
+  -r, --remove          include this flag to remove orignal file after encrypt/decrypt
+  -h, --help            display help for command
 ```
 
 ### Example:
