@@ -52,7 +52,6 @@ const passwordPrompt = (query: string) => {
     stdin.setEncoding('utf8');
 
     const promptHandler = (ch: any) => {
-        // ch.split('').map((c) => {log.info(c.charCodeAt(0))})
         switch (ch.toString('utf-8')) {
             case '\n':
             case '\r':
