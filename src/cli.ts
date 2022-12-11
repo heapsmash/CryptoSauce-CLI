@@ -9,7 +9,7 @@ import chalk from 'chalk';
 import * as fs from 'fs';
 import md5 from 'md5';
 
-type RtHack = {
+type RlHack = {
     _writeToOutput: (stringToWrite: string) => void
 } & readline.Interface
 
@@ -96,9 +96,9 @@ const passwordPrompt = (query: string) => {
     };
     stdin.on('data', promptHandler);
 
-    // We have to override this or it mangles our output. And casting as 'RtHack'
+    // We have to override this or it mangles our output. And casting as 'RlHack'
     // is a workaround b/c typescript doesn't see the dunder method in readline.Interface
-    (rl as RtHack)._writeToOutput = (stringToWrite: string) => {};
+    (rl as RlHack)._writeToOutput = (stringToWrite: string) => {};
 
     return retval;
 };
